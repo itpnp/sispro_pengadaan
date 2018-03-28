@@ -26,8 +26,9 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo site_url('Welcome/supplierAddPage'); ?>"><i class="fa fa-circle-o"></i> TAMBAH SUPPLIER</a></li>
-            </ul>
+            <li><a href="<?php echo site_url('admin/SupplierController/supplierHomePage'); ?>"><i class="fa fa-circle-o"></i> VIEW DATA</a></li>
+            <li><a href="<?php echo site_url('admin/SupplierController/supplierAddPage'); ?>"><i class="fa fa-circle-o"></i> TAMBAH SUPPLIER</a></li>
+          </ul>
         </li>
         <li class="treeview">
           <a href="#">

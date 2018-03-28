@@ -44,14 +44,6 @@ class Welcome extends CI_Controller {
 		$this->load->view('admin/footer');
 	}
 
-	public function supplierAddPage()
-	{
-		$this->load->view('supplier/header');
-		$this->load->view('supplier/sidebar');
-		$this->load->view('supplier/supplier_add');
-		$this->load->view('supplier/footer');
-	}
-
 	public function login(){
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');

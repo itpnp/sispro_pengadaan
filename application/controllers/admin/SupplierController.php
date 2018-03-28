@@ -30,7 +30,7 @@ class SupplierController extends CI_Controller {
 		$this->output->set_header('Cache-Control:no-store, no-cache, must-revalidate');
 		$this->output->set_header('Cache-Control:post-check=0,pre-check=0',false);
 		$this->output->set_header('Pragma: no-cache');
-		$this->load->model('m_login');
+		$this->load->model('m_supplier');
 		session_start();
 
 		// $this->load->library('Userauth');
@@ -40,5 +40,44 @@ class SupplierController extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('admin/supplier_home');
+	}
+
+
+	public function supplierAddPage()
+	{
+		$data = array();
+		$getData = $this->m_supplier->getMaxNumber();
+		$number = ($getData->KODE)+1;
+		if(strlen($number)==4){
+			$number = "0000".$number;
+		}
+		$data["lastNumber"]=$number;
+		$this->load->view('supplier/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('supplier/supplier_add',$data);
+		$this->load->view('supplier/footer');
+	}
+
+	public function supplierHomePage()
+	{
+		$data = array();
+		$data["listSupplier"] = $this->m_supplier->getAllData();
+		$this->load->view('supplier/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('supplier/supplier_home', $data);
+		$this->load->view('supplier/footer');
+	}
+
+	public function save()
+	{
+		$data = array();
+		$data["KODE"] = $this->input->post('kodeSupplier');
+		$data["NAMA"] = $this->input->post('namaSupplier');
+		$data["ALAMAT1"] = $this->input->post('alamat1');
+		$data["listSupplier"] = $this->m_supplier->getAllData();
+		$this->load->view('supplier/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('supplier/supplier_home', $data);
+		$this->load->view('supplier/footer');
 	}
 }

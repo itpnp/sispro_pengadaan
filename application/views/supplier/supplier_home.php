@@ -29,286 +29,32 @@
                   <th>Kode Supplier</th>
                   <th>Nama Suplier</th>
                   <th>Alamat</th>
-                  <th>Contact/th>
+                  <th>Contact</th>
                   <th>No. Telp</th>
                   <th>Detail</th>
                   <th>Edit</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                  <td>SPL048</td>
-                  <td>Suplier ex new 4.0</td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
-                  <td>X</td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-success">Detail</button>
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-warning">Edit</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>SPL049</td>
-                  <td>Suplier ex new 5.0</td>
-                  <td>Win 95+</td>
-                  <td>5</td>
-                  <td>C</td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-success">Detail</button>
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-warning">Edit</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>SPL050</td>
-                  <td>Suplier ex new 5.5</td>
-                  <td>Win 95+</td>
-                  <td>5.5</td>
-                  <td>A</td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-success">Detail</button>
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-warning">Edit</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>SPL051</td>
-                  <td>Suplier ex new 6</td>
-                  <td>Win 98+</td>
-                  <td>6</td>
-                  <td>A</td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-success">Detail</button>
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-warning">Edit</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>SPL052</td>
-                  <td>Suplier Ex 7</td>
-                  <td>Win XP SP2+</td>
-                  <td>7</td>
-                  <td>A</td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-success">Detail</button>
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-warning">Edit</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>SPL053</td>
-                  <td>Suplier Ex (AOL desktop)</td>
-                  <td>Win XP</td>
-                  <td>6</td>
-                  <td>A</td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-success">Detail</button>
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-warning">Edit</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>SPL001</td>
-                  <td>Suplier 1.0</td>
-                  <td>Suplier 98</td>
-                  <td>1.7</td>
-                  <td>A</td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-success">Detail</button>
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-warning">Edit</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>SPL002</td>
-                  <td>Suplier 1.5</td>
-                  <td>Suplier 98</td>
-                  <td>1.8</td>
-                  <td>A</td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-success">Detail</button>
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-warning">Edit</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>SPL003</td>
-                  <td>Suplier 2.0</td>
-                  <td>Suplier 98</td>
-                  <td>1.8</td>
-                  <td>A</td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-success">Detail</button>
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-warning">Edit</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>SPL004</td>
-                  <td>Suplier 3.0</td>
-                  <td>Win 2k+ / OSX.3+</td>
-                  <td>1.9</td>
-                  <td>A</td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-success">Detail</button>
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-warning">Edit</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>SPL005</td>
-                  <td>Suplier 1.0</td>
-                  <td>OSX.2+</td>
-                  <td>1.8</td>
-                  <td>A</td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-success">Detail</button>
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-warning">Edit</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>SPL006</td>
-                  <td>Suplier 1.5</td>
-                  <td>OSX.3+</td>
-                  <td>1.8</td>
-                  <td>A</td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-success">Detail</button>
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-warning">Edit</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>SPL007</td>
-                  <td>Suplier 7.2</td>
-                  <td>Win 95+ / Mac OS 8.6-9.2</td>
-                  <td>1.7</td>
-                  <td>A</td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-success">Detail</button>
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-warning">Edit</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>SPL008</td>
-                  <td>Suplier Browser 8</td>
-                  <td>Win 98SE+</td>
-                  <td>1.7</td>
-                  <td>A</td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-success">Detail</button>
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-warning">Edit</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>SPL009</td>
-                  <td>Suplier Navigator 9</td>
-                  <td>Suplier 98</td>
-                  <td>1.8</td>
-                  <td>A</td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-success">Detail</button>
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-warning">Edit</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>SPL010</td>
-                  <td>Suplier Mo 1.0</td>
-                  <td>Suplier 95</td>
-                  <td>1</td>
-                  <td>A</td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-success">Detail</button>
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-warning">Edit</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>SPL011</td>
-                  <td>Suplier Mo 1.1</td>
-                  <td>Suplier 95</td>
-                  <td>1.1</td>
-                  <td>A</td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-success">Detail</button>
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-warning">Edit</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>SPL012</td>
-                  <td>Suplier Mo 1.2</td>
-                  <td>Suplier 95</td>
-                  <td>1.2</td>
-                  <td>A</td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-success">Detail</button>
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-warning">Edit</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>SPL013</td>
-                  <td>Suplier Mo 1.3</td>
-                  <td>Suplier 95</td>
-                  <td>1.3</td>
-                  <td>A</td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-success">Detail</button>
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-warning">Edit</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>SPL014</td>
-                  <td>Suplier Mo 1.4</td>
-                  <td>Suplier 95</td>
-                  <td>1.4</td>
-                  <td>A</td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-success">Detail</button>
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-warning">Edit</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>SPL015</td>
-                  <td>Suplier Mo 1.5</td>
-                  <td>Suplier 95</td>
-                  <td>1.5</td>
-                  <td>A</td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-success">Detail</button>
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-block btn-warning">Edit</button>
-                  </td>
-                </tr>
+                  <?php
+                    foreach ($listSupplier as $row) {                    
+                  ?>
+                  <tr>
+                    <td><?php echo $row->KODE; ?></td>
+                    <td><?php echo $row->NAMA; ?></td>
+                    <td><?php echo $row->ALAMAT1;?></td>
+                    <td><?php echo $row->CONTACT_PERSON;?></td>
+                    <td><?php echo $row->TELPON;?></td>
+                    <td>
+                      <button type="button" class="btn btn-block btn-success">Detail</button>
+                    </td>
+                    <td>
+                      <button type="button" class="btn btn-block btn-warning">Edit</button>
+                    </td>
+                  </tr>
+                  <?php
+                    }
+                  ?>
                 </tbody>
               </table>
             </div>
