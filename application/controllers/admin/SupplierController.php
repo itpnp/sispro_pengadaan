@@ -31,6 +31,9 @@ class SupplierController extends CI_Controller {
 		$this->output->set_header('Cache-Control:post-check=0,pre-check=0',false);
 		$this->output->set_header('Pragma: no-cache');
 		$this->load->model('m_supplier');
+		$this->load->model('m_area');
+		$this->load->model('m_sales');
+		$this->load->model('m_collector');
 		session_start();
 
 		// $this->load->library('Userauth');
@@ -52,6 +55,9 @@ class SupplierController extends CI_Controller {
 			$number = "0000".$number;
 		}
 		$data["lastNumber"]=$number;
+		$data["listArea"] = $this->m_area->getAllData();
+		$data["listSales"] = $this->m_sales->getAllData();
+		$data["listCollector"] = $this->m_collector->getAllData();
 		$this->load->view('supplier/header');
 		$this->load->view('admin/sidebar');
 		$this->load->view('supplier/supplier_add',$data);
@@ -74,6 +80,17 @@ class SupplierController extends CI_Controller {
 		$data["KODE"] = $this->input->post('kodeSupplier');
 		$data["NAMA"] = $this->input->post('namaSupplier');
 		$data["ALAMAT1"] = $this->input->post('alamat1');
+		$data["ALAMAT2"] = $this->input->post('alamat2');
+		$data["KOTA"] = $this->input->post('kota');
+		$data["NEGARA"] = $this->input->post('negara');
+		$data["TELPON"] = $this->input->post('noTelp');
+		$data["FAX"] = $this->input->post('fax');
+		$data["NAMA_BANK"] = $this->input->post('namaBank');
+		$data["CONTACT_PERSON"] = $this->input->post('contactPerson');
+		$data["NOMER_ACCOUNT"] = $this->input->post('nomorAccount');
+		$data["ATAS_NAMA"] = $this->input->post('atasNama');
+		$data["TOP"] = $this->input->post('top');
+		$data["SATUAN_TOP"] = $this->input->post('satuanTop');
 		$data["listSupplier"] = $this->m_supplier->getAllData();
 		$this->load->view('supplier/header');
 		$this->load->view('admin/sidebar');

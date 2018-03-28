@@ -163,6 +163,21 @@
                           <input type="text" class="form-control" id="fax" name="fax" placeholder="Fax">
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="kodeArea" class="col-sm-4 control-label">Kode Area</label>
+                        <div class="col-sm-8">
+                          <select class="form-control select2" name="kodeArea" style="width: 100%;">
+                            <?php
+                              foreach ($listArea as $row) {
+                              
+                            ?>
+                              <option><?php echo $row->AREA?></option>
+                            <?php
+                              }
+                            ?>
+                          </select>
+                        </div>
+                      </div>
                     </div><!-- /.box-body -->
                   </div>
                 </div>
@@ -170,6 +185,36 @@
                   <div class="box box-info">
                     <!-- form start -->
                       <br>
+                      <div class="form-group">
+                        <label for="kodeSales" class="col-sm-4 control-label">Nama Sales</label>
+                        <div class="col-sm-8">
+                          <select class="form-control select2" name="kodeSales" style="width: 100%;">
+                            <?php
+                              foreach ($listSales as $row) {
+                              
+                            ?>
+                              <option><?php echo $row->NAMA_SALES?></option>
+                            <?php
+                              }
+                            ?>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="kodeCollector" class="col-sm-4 control-label">Nama Collector</label>
+                        <div class="col-sm-8">
+                          <select class="form-control select2" name="kodeCollector" style="width: 100%;">
+                            <?php
+                              foreach ($listCollector as $row) {
+                              
+                            ?>
+                              <option><?php echo $row->NAMA_COLLECTOR?></option>
+                            <?php
+                              }
+                            ?>
+                          </select>
+                        </div>
+                      </div>
                       <div class="form-group">
                         <label class="col-sm-4 control-label">Status</label>
                         <div class="col-sm-8">
@@ -239,10 +284,10 @@
                       <div class="form-group">
                         <label for="namaSuplier" class="col-sm-4 control-label">Time Of Payment</label>
                         <div class="col-sm-4">
-                          <input type="text" class="form-control" id="namaSuplier" placeholder="TOP">
+                          <input type="text" class="form-control" id="top" name="top" placeholder="TOP">
                         </div>
                         <div class="col-sm-4">
-                          <select class="form-control select2" style="width: 100%;">
+                          <select class="form-control select2" name="satuanTop" style="width: 100%;">
                             <option selected="selected">Hari</option>
                             <option>Bulan</option>
                             <option>Tahun</option>
