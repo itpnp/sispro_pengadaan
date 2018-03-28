@@ -38,10 +38,10 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('supplier/header');
-		$this->load->view('supplier/sidebar');
-		$this->load->view('pr/pr_add');
-		$this->load->view('supplier/footer');
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/home');
+		$this->load->view('admin/footer');
 	}
 
 	public function supplier()
