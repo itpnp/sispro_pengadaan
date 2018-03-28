@@ -5,10 +5,9 @@
     <section class="content-header">
       <h1>
         HOME
-        <small>SUPPLIER</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Supplier</a></li>
+        <li><a href="#"><i class="fa fa-dashboard"></i> Pengadaan</a></li>
         <li class="active">Home</li>
       </ol>
     </section>
@@ -19,7 +18,7 @@
         <div class="col-md-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Data Suplier</h3>
+              <h3 class="box-title">SELAMAT DATANG DI SISPRO PENGADAAN</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">

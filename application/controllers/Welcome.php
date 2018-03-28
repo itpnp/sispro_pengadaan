@@ -44,11 +44,11 @@ class Welcome extends CI_Controller {
 		$this->load->view('admin/footer');
 	}
 
-	public function supplier()
+	public function supplierAddPage()
 	{
 		$this->load->view('supplier/header');
 		$this->load->view('supplier/sidebar');
-		$this->load->view('pr/pr_add');
+		$this->load->view('supplier/supplier_add');
 		$this->load->view('supplier/footer');
 	}
 
