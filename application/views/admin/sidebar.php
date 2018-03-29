@@ -32,8 +32,47 @@
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-tasks"></i> <span>BARANG</span>
+            <i class="fa fa-edit"></i> 
+			<span>BARANG</span>
+			  <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
           </a>
+		    <ul class="treeview-menu">
+             <li class="treeview">
+              <a href="#"><i class="fa fa-circle-o"></i> KATEGORI BARANG
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> VIEW DATA</a></li>
+				 <li><a href="#"><i class="fa fa-circle-o"></i> TAMBAH KATEGORI BARANG</a></li>
+			  </ul><!--level2--> 	
+			</li><!-- /.kategori barang -->
+           <li class="treeview">
+              <a href="#"><i class="fa fa-circle-o"></i>SUB KATEGORI BARANG
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> VIEW DATA</a></li>
+				 <li><a href="#"><i class="fa fa-circle-o"></i> TAMBAH SUB KATEGORI</a></li>
+			  </ul><!--level2--> 	
+			</li><!-- /.kategori barang -->
+			<li class="treeview">
+              <a href="#"><i class="fa fa-circle-o"></i> DETAIL BARANG
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> VIEW DATA</a></li>
+				 <li><a href="#"><i class="fa fa-circle-o"></i> TAMBAH DETAIL </a></li>
+			  </ul><!--level2--> 	
+			</li><!-- /.kategori barang -->
+          </ul>
         </li>
       </ul>
     </section>
