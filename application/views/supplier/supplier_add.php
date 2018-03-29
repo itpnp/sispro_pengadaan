@@ -23,7 +23,7 @@
               <li class="active"><a href="#profil" data-toggle="tab">Profil</a></li>
               <li class="pull-left header"><i class="fa fa-inbox"></i>Detail</li>
             </ul>
-            <form class="form-horizontal">
+            <form class="form-horizontal" action="<?php echo site_url('admin/SupplierController/save'); ?>" method="post">
             <div class="tab-content no-padding">
               <!-- Morris chart - Sales -->
               <div class="chart tab-pane" id="barang" style="position: relative; height: 500px;">  
@@ -106,59 +106,59 @@
                       <div class="form-group">
                         <label for="kodeSuplier" class="col-sm-4 control-label">Kode Suplier</label>
                         <div class="col-sm-8">
-                          <input type="text" class="form-control" id="kodeSupplier" value="<?php if($lastNumber != null) echo $lastNumber ?>" name = "kodeSuplier" placeholder="Kode Suplier" readonly>
+                          <input type="text" class="form-control" id="kodeSupplier" value="<?php if($lastNumber != null) echo $lastNumber ?>" name = "kodeSupplier" placeholder="Kode Suplier" readonly>
                         </div>
                       </div>
                       <div class="form-group">
                         <label for="namaSuplier" class="col-sm-4 control-label">Nama Suplier</label>
                         <div class="col-sm-8">
-                          <input type="text" class="form-control" id="namaSupplier" name="namaSuplier" placeholder="Nama Suplier">
+                          <input type="text" class="form-control" id="namaSupplier" name="namaSupplier" placeholder="Nama Suplier">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="namaSuplier" class="col-sm-4 control-label">Nickname</label>
+                        <label for="nickname" class="col-sm-4 control-label">Nickname</label>
                         <div class="col-sm-8">
                           <input type="text" class="form-control" id="nickname" name="nickname" placeholder="Nama Suplier">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="namaSuplier" class="col-sm-4 control-label">Alamat 1</label>
+                        <label for="alamat1" class="col-sm-4 control-label">Alamat 1</label>
                         <div class="col-sm-8">
                           <input type="text" class="form-control" name = "alamat1" id="alamat1" placeholder="Alamat">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="namaSuplier" class="col-sm-4 control-label">Alamat 2</label>
+                        <label for="alamat2" class="col-sm-4 control-label">Alamat 2</label>
                         <div class="col-sm-8">
                           <input type="text" class="form-control" name = "alamat2" id="alamat2" placeholder="Alamat">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="namaSuplier" class="col-sm-4 control-label">Kota</label>
+                        <label for="kota" class="col-sm-4 control-label">Kota</label>
                         <div class="col-sm-8">
                           <input type="text" class="form-control" name = "kota" id="kota" placeholder="Kota">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="namaSuplier" class="col-sm-4 control-label">Negara</label>
+                        <label for="negara" class="col-sm-4 control-label">Negara</label>
                         <div class="col-sm-8">
                           <input type="text" class="form-control" name = "negara" id="negara" placeholder="Negara">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="namaSuplier" class="col-sm-4 control-label">Email</label>
+                        <label for="email" class="col-sm-4 control-label">Email</label>
                         <div class="col-sm-8">
                           <input type="text" class="form-control" id="email" name="email" placeholder="Email">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="namaSuplier" class="col-sm-4 control-label">No Telpon</label>
+                        <label for="noTelp" class="col-sm-4 control-label">No Telpon</label>
                         <div class="col-sm-8">
                           <input type="text" class="form-control" id="noTelp" name="noTelp" placeholder="No Telpon">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="namaSuplier" class="col-sm-4 control-label">Fax</label>
+                        <label for="fax" class="col-sm-4 control-label">Fax</label>
                         <div class="col-sm-8">
                           <input type="text" class="form-control" id="fax" name="fax" placeholder="Fax">
                         </div>
@@ -169,9 +169,8 @@
                           <select class="form-control select2" name="kodeArea" style="width: 100%;">
                             <?php
                               foreach ($listArea as $row) {
-                              
                             ?>
-                              <option><?php echo $row->AREA?></option>
+                              <option value="<?php echo $row->KODE_AREA?>"><?php echo $row->AREA?></option>
                             <?php
                               }
                             ?>
@@ -191,9 +190,8 @@
                           <select class="form-control select2" name="kodeSales" style="width: 100%;">
                             <?php
                               foreach ($listSales as $row) {
-                              
                             ?>
-                              <option><?php echo $row->NAMA_SALES?></option>
+                              <option value="<?php echo $row->KODE_SALES ?>"><?php echo $row->NAMA_SALES?></option>
                             <?php
                               }
                             ?>
@@ -208,7 +206,7 @@
                               foreach ($listCollector as $row) {
                               
                             ?>
-                              <option><?php echo $row->NAMA_COLLECTOR?></option>
+                              <option value="<?php echo $row->KODE_COLLECTOR ?>"><?php echo $row->NAMA_COLLECTOR?></option>
                             <?php
                               }
                             ?>
@@ -219,11 +217,11 @@
                         <label class="col-sm-4 control-label">Status</label>
                         <div class="col-sm-8">
                           <label for="pkp" class="col-sm-6 control-label">
-                            <input type="radio" name="pkp" class="flat-red">
+                            <input type="radio" name="statusPkp" value="1" class="flat-red">
                             PKP
                           </label>
-                          <label for="pkp" class="col-sm-6 control-label">
-                            <input type="radio" name="nonPkp" class="flat-red">
+                          <label for="nonPkp" class="col-sm-6 control-label">
+                            <input type="radio" name="statusPkp" value="0" class="flat-red">
                             NON PKP
                           </label>
                         </div>
@@ -236,26 +234,26 @@
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="namaSuplier" class="col-sm-4 control-label">No. NPWP</label>
+                        <label for="npwp" class="col-sm-4 control-label">No. NPWP</label>
                         <div class="col-sm-8">
-                          <input type="text" class="form-control" id="namaSuplier" placeholder="No. NPWP">
+                          <input type="text" class="form-control" id="npwp" name="npwp" placeholder="No. NPWP">
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="col-sm-4 control-label">Status VIP</label>
                         <div class="col-sm-8">
-                          <label for="pkp" class="col-sm-6 control-label">
-                            <input type="radio" name="vip" class="flat-red">
+                          <label for="vip" class="col-sm-6 control-label">
+                            <input type="radio" name="statusVip" value="1" class="flat-red">
                             VIP
                           </label>
-                          <label for="pkp" class="col-sm-6 control-label">
-                            <input type="radio" name="reguler" class="flat-red">
+                          <label for="reguler" class="col-sm-6 control-label">
+                            <input type="radio" name="statusVip" value="0" class="flat-red">
                             REGULER
                           </label>
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="namaSuplier" class="col-sm-4 control-label">Kode Keuangan</label>
+                        <label for="kodeKeuangan" class="col-sm-4 control-label">Kode Keuangan</label>
                         <div class="col-sm-6">
                           <input type="text" class="form-control" id="kodeKeuangan" name="kodeKeuangan" placeholder="kode Keuangan" readonly>
                         </div>
@@ -264,33 +262,33 @@
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="namaSuplier" class="col-sm-4 control-label">Nama Bank</label>
+                        <label for="namaBank" class="col-sm-4 control-label">Nama Bank</label>
                         <div class="col-sm-8">
                           <input type="text" class="form-control" id="namaBank" name="namaBank" placeholder="Nama Bank">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="namaSuplier" class="col-sm-4 control-label">Nomor Account</label>
+                        <label for="nomorAccount" class="col-sm-4 control-label">Nomor Account</label>
                         <div class="col-sm-8">
                           <input type="text" class="form-control" id="nomorAccount" name="nomorAccount" placeholder="Atas Nama">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="namaSuplier" class="col-sm-4 control-label">Atas Nama</label>
+                        <label for="atasNama" class="col-sm-4 control-label">Atas Nama</label>
                         <div class="col-sm-8">
                           <input type="text" class="form-control" id="atasNama" name="atasNama" placeholder="Atas Nama">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="namaSuplier" class="col-sm-4 control-label">Time Of Payment</label>
+                        <label for="timeOfPayment" class="col-sm-4 control-label">Time Of Payment</label>
                         <div class="col-sm-4">
                           <input type="text" class="form-control" id="top" name="top" placeholder="TOP">
                         </div>
                         <div class="col-sm-4">
                           <select class="form-control select2" name="satuanTop" style="width: 100%;">
                             <option selected="selected">Hari</option>
-                            <option>Bulan</option>
-                            <option>Tahun</option>
+                            <option value="bulan">Bulan</option>
+                            <option value="tahun">Tahun</option>
                           </select>
                         </div>
                       </div>
@@ -298,7 +296,7 @@
                         <div class="col-sm-4">
                         </div>
                         <div class="col-sm-8">
-                        <button type="button" class="btn btn-block btn-primary">SIMPAN</button>
+                        <button type="submit" class="btn btn-block btn-primary">SIMPAN</button>
                         </div>
                       </div>
                     </div>
