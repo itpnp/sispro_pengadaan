@@ -40,18 +40,14 @@
                 <tbody>
 					<form id="form1" name="form1" method="get" action="" >
                   <?php
-				  $i=1;
+				          $i=1;
                     foreach ($listKategori as $row) {                    
                   ?>
                   <tr>
                     <td><?php echo $row->ID_KATEGORI; ?></td>
                     <td><?php echo $row->NAMA_KATEGORI; ?></td>
-					<?php  echo " <input type='text' name=ids".$i." id=ids".$i." value=$row->ID_KATEGORI>
-					<input type='text' name=namas".$i." id=namas".$i." value=$row->NAMA_KATEGORI><input type='hidden' name=nomor id=nomor value=$i>";
-                    ?>
-					<td>
-                      <input type='button'  value='DETAIL' class="btn btn-block btn-success" data-toggle="modal" data-target='#modal-default' onclick="ambil_data(document.getElementById('ids' +document.getElementById('nomor').value).value,document.getElementById('namas' +document.getElementById('nomor').value).value)"
-					  >
+					           <td>
+                      <input type='button'  id = '<?php echo $row->ID_KATEGORI; ?>@<?php echo $row->NAMA_KATEGORI; ?>' value='DETAIL' class="btn btn-block btn-success" data-toggle="modal" data-target='#modal-default'>
                     </td>
                    
                   </tr>
@@ -91,7 +87,7 @@
                           <div class="form-group">
                             <label for="kodeSuplier" class="col-sm-4 control-label">Kode Kategori Barang</label>
                             <div class="col-sm-8">
-                            <input type="text" class="form-control" id="kodeKategori" value="<?php if($lastNumber != null) echo $lastNumber ?>" name = "kodeKategori" placeholder="Kode Kategori" readonly>
+                            <input type="text" class="form-control" id="kodeKategori" name = "kodeKategori" placeholder="Kode Kategori" readonly>
                             </div>
                           </div>
                           <div class="form-group">
@@ -151,3 +147,5 @@
           <!-- /.modal-dialog -->
         </div>
         <!-- /.modal -->
+
+

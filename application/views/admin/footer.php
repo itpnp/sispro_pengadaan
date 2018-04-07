@@ -37,5 +37,15 @@
     })
   })
 </script>
+<script type="text/javascript">
+    $('#modal-default').on('show.bs.modal', function(e) {
+
+        var $modal = $(this),
+        data = e.relatedTarget.id;
+        data = data.split("@");
+        $("#kodeKategoriEdit").val(data[0]);
+        $("#namaKategoriEdit").val(data[1]);
+    })
+</script>
 </body>
 </html>
