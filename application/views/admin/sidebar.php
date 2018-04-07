@@ -46,8 +46,8 @@
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> VIEW DATA</a></li>
-				 <li><a href="#"><i class="fa fa-circle-o"></i> TAMBAH KATEGORI BARANG</a></li>
+                <li><a href="<?php echo site_url('admin/KategoriBarangController/kategoriHomePage'); ?>"><i class="fa fa-circle-o"></i> VIEW DATA</a></li>
+				 
 			  </ul><!--level2--> 	
 			</li><!-- /.kategori barang -->
            <li class="treeview">

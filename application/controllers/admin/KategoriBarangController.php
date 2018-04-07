@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class SupplierController extends CI_Controller {
+class KategoriBarangController extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -30,10 +30,8 @@ class SupplierController extends CI_Controller {
 		$this->output->set_header('Cache-Control:no-store, no-cache, must-revalidate');
 		$this->output->set_header('Cache-Control:post-check=0,pre-check=0',false);
 		$this->output->set_header('Pragma: no-cache');
-		$this->load->model('m_supplier');
-		$this->load->model('m_area');
-		$this->load->model('m_sales');
-		$this->load->model('m_collector');
+		$this->load->model('m_kategori_barang');
+		
 		session_start();
 
 		// $this->load->library('Userauth');
@@ -46,55 +44,40 @@ class SupplierController extends CI_Controller {
 	}
 
 
-	public function supplierAddPage()
-	{
-		$data = array();
-		$getData = $this->m_supplier->getMaxNumber();
-		$number = ($getData->KODE)+1;
-		if(strlen($number)==4){
-			$number = "0000".$number;
-		}
-		$data["lastNumber"]=$number;
-		$data["listArea"] = $this->m_area->getAllData();
-		$data["listSales"] = $this->m_sales->getAllData();
-		$data["listCollector"] = $this->m_collector->getAllData();
-		$this->load->view('supplier/header');
-		$this->load->view('admin/sidebar');
-		$this->load->view('supplier/supplier_add',$data);
-		$this->load->view('supplier/footer');
-	}
+	
 
-	public function supplierHomePage()
+	public function kategoriHomePage()
 	{
 		$data = array();
-		$data["listSupplier"] = $this->m_supplier->getAllData();
-		$this->load->view('supplier/header');
+		$getData = $this->m_kategori_barang->getMaxNumber();
+		$number = ($getData->ID_KATEGORI)+1;
+		$data["lastNumber"]=$number;
+		$data["listKategori"] = $this->m_kategori_barang->getAllData();
+		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
-		$this->load->view('supplier/supplier_home', $data);
-		$this->load->view('supplier/footer');
+		$this->load->view('kategori_barang/kategori_home', $data);
+		$this->load->view('admin/footer');
 	}
 
 	public function save()
 	{
 		$data = array();
-		$data["KODE"] = $this->input->post('kodeSupplier');
-		$data["NAMA"] = $this->input->post('namaSupplier');
-		$data["ALAMAT1"] = $this->input->post('alamat1');
-		$data["ALAMAT2"] = $this->input->post('alamat2');
-		$data["KOTA"] = $this->input->post('kota');
-		$data["NEGARA"] = $this->input->post('negara');
-		$data["TELPON"] = $this->input->post('noTelp');
-		$data["FAX"] = $this->input->post('fax');
-		$data["NAMA_BANK"] = $this->input->post('namaBank');
-		$data["CONTACT_PERSON"] = $this->input->post('contactPerson');
-		$data["NOMER_ACCOUNT"] = $this->input->post('nomorAccount');
-		$data["ATAS_NAMA"] = $this->input->post('atasNama');
-		$data["TOP"] = $this->input->post('top');
-		$data["SATUAN_TOP"] = $this->input->post('satuanTop');
-		$data["listSupplier"] = $this->m_supplier->getAllData();
-		$this->load->view('supplier/header');
-		$this->load->view('admin/sidebar');
-		$this->load->view('supplier/supplier_home', $data);
-		$this->load->view('supplier/footer');
+		$data["ID_KATEGORI"] = $this->input->post('kodeKategori');
+		$data["NAMA_KATEGORI"] = $this->input->post('namaKategori');
+		$success = $this->m_kategori_barang->save($data);
+		  if($success){
+			$data2 = array();
+			$getData = $this->m_kategori_barang->getMaxNumber();
+		    $number = ($getData->ID_KATEGORI)+1;
+			$data2["lastNumber"]=$number;
+		    $data2["listKategori"] = $this->m_kategori_barang->getAllData();
+			$this->load->view('admin/header');
+		    $this->load->view('admin/sidebar');
+		    $this->load->view('kategori_barang/kategori_home', $data2);
+		    $this->load->view('admin/footer');
+	   	}else{
+			echo "something wrong";
+			exit();
+		}
 	}
 }
